@@ -2,6 +2,7 @@
 :root {
   --maing-background-color: black;
   --secondary-background-color: white;
+  --transparent-color: rgb(15, 116, 143, 70%);
   --main-color: #00C7FC;
   --main-transition: 0.3s;
   --padding-section: 60px;
@@ -21,7 +22,6 @@
   }
   body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--maing-background-color);
   }
   .container {
     padding-left: 15px;
@@ -56,7 +56,7 @@
   header {
     /* the landing background will appear after the header so u need to use position to make it appear from the header */
     /* This Position till index is for the landing fullscreen background image  */
-    position: absolute;
+    position: absolute; 
     left: 0;
     width: 100%;
     z-index: 2;
@@ -69,7 +69,7 @@
     /* Min-height not height only 100px is the header height*/
     min-height: 100px;
   }
-  header .container::before {
+  header .container::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -117,7 +117,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: crimson; 
+    background-color: rgb(0,0,0,50%); 
   }
   nav .toggle-menu:hover + ul li a {
     padding: 15px;
@@ -154,11 +154,93 @@
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    padding-left: 15px;
   }
 /* Header End */
 /* Landing Start */
-
+  .landing {
+    min-height: 100vh;
+    background-image: url(/imgs/landing.jpg);
+    background-size: cover;
+    /* Alternative if the main img have issue this will appear */
+    background-color: black;
+  }
+  .landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0 , 50%);
+  }
+  .landing .text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (max-width:767px) {
+    .landing .text {
+      width: 100%;
+    }
+  }
+  /* For the Display flex justify content flex end */
+  .landing .text .content {
+    max-width: 500px;
+  }
+  @media (max-width:767px) {
+    .landing .text .content {
+      max-width: 100%;
+    }
+  }
+  .landing .text .content h2 {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .landing .text .content p {
+    font-size: 15px;
+    line-height: 2;
+  }
+  .landing .change-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (max-width:768px) {
+    .landing .change-background {
+      display: none;
+    }
+  }
+  .landing .fa-angle-left {
+    left: 30px;
+  }
+  .landing .fa-angle-right {
+    right: 30px;
+  }
+  .landing .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+  }
+  .landing .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .landing .bullets li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+  }
 /* Landing End */
 /* Services Start */
 
