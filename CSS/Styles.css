@@ -5,7 +5,7 @@
   --transparent-color: rgb(15, 116, 143, 70%);
   --main-color: #00C7FC;
   --main-transition: 0.3s;
-  --padding-section: 60px;
+  --padding-section: 100px;
 }
 /* Variables End */
 /* Global Rules Start */
@@ -49,9 +49,47 @@
   }
 /* Global Rules End */
 /* Components Start */
-
+  .main-heading {
+    text-align: center;
+}
+  .main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+  .main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: black;
+  bottom: -30px;
+  width: 120px;
+}
+  .main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid black;
+  bottom: -40px;
+  background-color: white;
+}
+  .main-heading p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
 /* Components End */
-
 /* Header Start */
   header {
     /* the landing background will appear after the header so u need to use position to make it appear from the header */
@@ -60,6 +98,11 @@
     left: 0;
     width: 100%;
     z-index: 2;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   header .container {
     display: flex;
@@ -243,7 +286,40 @@
   }
 /* Landing End */
 /* Services Start */
-
+  .services {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+  }
+  @media (min-width:768px) {
+    .services .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      column-gap: 40px;
+      row-gap: 60px;
+    }
+  }
+  .services .srv-box {
+    display: flex;
+  }
+  @media (max-width:768px) {
+    .services .srv-box {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  .services .srv-box i {
+    margin: 0 50px 30px;
+  }
+  .services .srv-box h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+  }
+  .services .srv-box p {
+    line-height: 2;
+    color: #777;
+  }
 /* Services End */
 /* Portfolio Start */
 
