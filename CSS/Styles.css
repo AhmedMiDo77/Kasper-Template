@@ -206,8 +206,8 @@
     /* Alternative if the main img have issue this will appear */
     background-color: black;
   }
-  position: absolute;
   .landing .overlay {
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
