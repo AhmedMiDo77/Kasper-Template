@@ -196,7 +196,7 @@
 /* Landing Start */
   .landing {
     min-height: 100vh;
-    background-image: url(imgs/landing.jpg);
+    background-image: url(../imgs/landing.jpg);
     background-size: cover;
     /* Alternative if the main img have issue this will appear */
     background-color: black;
@@ -321,7 +321,7 @@
     padding-bottom: var(--padding-section);
     height: 600px;
     position: relative;
-    background-image: url(imgs/design-features.jpg);
+    background-image: url(../imgs/design-features.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -523,7 +523,7 @@
     padding-top: var(--padding-section);
     padding-bottom: var(--padding-section);
     text-align: center;
-    background-image: url(imgs/stats.png);
+    background-image: url(../imgs/stats.png);
     background-size: cover;
     position: relative;
   }
@@ -700,7 +700,7 @@
   .quote {
     padding-top: var(--padding-section);
     padding-bottom: var(--padding-section);
-    background-image: url(imgs/quote.jpg);
+    background-image: url(../imgs/quote.jpg);
     background-size: cover;
     position: relative;
     text-align: center;
@@ -822,7 +822,7 @@
   .subscribe {
     padding-top: var(--padding-section);
     padding-bottom: var(--padding-section);
-    background-image: url(imgs/subscribe.jpg);
+    background-image: url(../imgs/subscribe.jpg);
     background-size: cover;
     position: relative;
     color: white;
@@ -985,7 +985,7 @@
   .footer {
     padding-top: calc(var(--padding-section) / 2);
     padding-bottom: calc(var(--padding-section) / 2);
-    background-image: url(imgs/subscribe.jpg);
+    background-image: url(../imgs/subscribe.jpg);
     background-size: cover;
     position: relative;
     color: white;
